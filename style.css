@@ -1,0 +1,99 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-transform: capitalize;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+body{
+	background: #030321;
+  	color: rgb(255, 0, 0);
+}
+
+.container{
+	position: relative;
+	min-height: 100vh;
+}
+
+.container h1{
+	text-align: center;
+	padding: 15px;
+	font-size: 40px;
+	font-weight: normal;
+  	font-family: "Avenir Next", sans-serif;
+  	font-weight: 900;
+  	text-transform: uppercase;
+  	font-style: italic;
+  	letter-spacing: 0.05em;
+}
+
+
+.container .video-container{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+	justify-content: center;
+	padding: 10px;
+}
+
+.container .video-container .video{
+	height: 300px;
+	width: 470px;
+	border: 1px solid white;
+	border-radius: 5px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, .7);
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.container .video-container .video video{
+	height:  100%;
+	width: 100%;
+	object-fit: cover;
+	transition: .2s linear;
+}
+
+.container .video-container .video:hover video{
+	transform: scale(1.2);
+}
+
+.container .popup-video{
+	position: fixed;
+	top:  0;
+	left:  0;
+	z-index: 100;
+	background: rgba(0, 0, 0, .8);
+	height: 100%;
+	width: 100%;
+	display: none;
+}
+
+.container .popup-video video{
+	position: absolute;
+	top:  50%;
+	left:  50%;
+	transform: translate(-50%, -50%);
+	width: 750px;
+	border-radius: 5px;
+	border: 3px solid white;
+	object-fit: cover;
+}
+
+.container .popup-video span{
+	position:  absolute;
+	top:  5px;
+	right: 20px;
+	font-size: 50px;
+	color: white;
+	font-weight: bolder;
+	z-index: 100;
+	cursor: pointer;
+}
+
+@media (max-width: 768px){
+	.container .popup-video video{
+		width: 95%;
+	}
+}

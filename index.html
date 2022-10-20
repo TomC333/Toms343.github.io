@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- link to css file -->
+	<link rel="stylesheet" href="style.css">
+	<title></title>
+</head>
+<body>
+	
+	<div class="container">
+
+		<h1>Toms Artworks</h1> 
+
+		<div class="video-container">
+			<div class="video"><video src="videos/for_portfolio_1.mp4" loop autoplay muted ></video></div>
+		</div>
+
+		<div class="popup-video">
+			<span>&times;</span>
+			<video src="videos/for_portfolio_1.mp4" muted autoplay controls></video>
+		</div>
+
+	</div>
+
+	<script>
+		document.querySelectorAll('.video-container video').forEach(vid =>{
+			vid.onclick = () => {
+				document.querySelector('.popup-video').style.display = 'block';
+				document.querySelector('popup-video video').src = vid.getAttrbute('src');
+			}
+		});
+
+		document.querySelector('.popup-video span').onclick = () =>{
+			document.querySelector('.popup-video').style.display = 'none';
+		}
+
+	</script>
+
+</body>
+</html>
