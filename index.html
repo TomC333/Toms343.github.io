@@ -19,26 +19,7 @@
 			<div class="video"><video src="videos/for_portfolio_2.mp4" loop autoplay muted ></video></div>
 		</div>
 
-		<div class="popup-video">
-			<span>&times;</span>
-			<video src="videos/for_portfolio_1.mp4" muted autoplay controls></video>
-		</div>
-
 	</div>
-
-	<script>
-		document.querySelectorAll('.video-container video').forEach(vid =>{
-			vid.onclick = () => {
-				document.querySelector('.popup-video').style.display = 'block';
-				document.querySelector('popup-video video').src = vid.getAttrbute('src');
-			}
-		});
-
-		document.querySelector('.popup-video span').onclick = () =>{
-			document.querySelector('.popup-video').style.display = 'none';
-		}
-
-	</script>
 
 </body>
 </html>
